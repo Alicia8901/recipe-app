@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Recipe App</title>
+ <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <div class="container">
+   <h1>Recipe App</h1>
+
+   <form id="recipe-form">
+     <input type="text" id="title" placeholder="Recipe Title" required />
+     <textarea id="ingredients" placeholder="Ingredients (comma separated)" required></textarea>
+     <textarea id="instructions" placeholder="Instructions" required></textarea>
+     <button type="submit">Add Recipe</button>
+   </form>
+
+   <h2>My Recipes</h2>
+   <div id="recipe-list"></div>
+
+   <div id="recipe-details" class="hidden">
+     <h3 id="detail-title"></h3>
+     <p><strong>Ingredients:</strong> <span id="detail-ingredients"></span></p>
+     <p><strong>Instructions:</strong> <span id="detail-instructions"></span></p>
+     <button onclick="closeDetails()">Close</button>
+   </div>
+ </div>
+
+ <script src="app.js"></script>
+</body>
+</html>
